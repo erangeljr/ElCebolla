@@ -50,7 +50,7 @@ namespace ElCebollla.Test
 
             _personRepository.Create(person);
 
-            Assert.IsTrue(_personRepository.GetAll().Count() == (personCount + 1));
+            Assert.IsTrue(_personRepository.GetAll().Count() > personCount);
             Assert.IsTrue(person.PersonId > lasId );
 
         }
@@ -68,6 +68,18 @@ namespace ElCebollla.Test
 
             Assert.IsTrue(_personRepository.GetByLastName(newLastName).Any());
 
+        }
+
+        [TestMethod, TestCategory("Person Repository")]
+        public void Can_Delete()
+        {
+            var person = _personRepository.GetById(1);
+            var personCount = _personRepository.GetAll().Count();
+
+            _personRepository.Delete(person);
+
+            Assert.IsNull(_personRepository.GetById(person.PersonId));
+            Assert.IsTrue(_personRepository.GetAll().Count() < personCount);
         }
     }
 }
