@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ElCebolla.Core.Services
 {
-    public interface IPersonRepository : IRepository<Person>
+    public interface IPersonRepository : IEntity<Person>, IRepository<Person>
     {
         IEnumerable<Person> GetByLastName(string lastName);
     }

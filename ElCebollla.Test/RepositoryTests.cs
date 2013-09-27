@@ -38,6 +38,9 @@ namespace ElCebollla.Test
         [TestMethod, TestCategory("Person Repository")]
         public void Can_Create()
         {
+            var personCount = _personRepository.GetAll().Count();
+            var lasId = _personRepository.GetAll().Max(p => p.PersonId);
+
             var person = new Person
             {
                 DateOfBirth = DateTime.Now,
@@ -46,6 +49,24 @@ namespace ElCebollla.Test
             };
 
             _personRepository.Create(person);
+
+            Assert.IsTrue(_personRepository.GetAll().Count() == (personCount + 1));
+            Assert.IsTrue(person.PersonId > lasId );
+
+        }
+
+        [TestMethod, TestCategory("Person Repository")]
+        public void Can_Update()
+        {
+            const string newLastName = "Bomb";
+            var person = _personRepository.GetById(2);
+
+            if (person == null)
+                Assert.Fail();
+            person.LastName = newLastName;
+            _personRepository.Update(person);
+
+            Assert.IsTrue(_personRepository.GetByLastName(newLastName).Any());
 
         }
     }

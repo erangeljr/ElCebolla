@@ -43,6 +43,7 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IEntity.cs" />
     <Compile Include="Services\ILocationRepository.cs" />
     <Compile Include="Services\IPersonRepository.cs" />
     <Compile Include="Services\IRepository.cs" />
