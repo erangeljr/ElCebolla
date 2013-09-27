@@ -17,7 +17,8 @@ namespace ElCebolla.Infrastructure.Stubs
             {
                 DateOfBirth = new DateTime(1984,1,1),
                 FirstName = "Harry",
-                LastName = "Potter"
+                LastName = "Potter",
+                PersonId = 1
 
             };
 
@@ -25,7 +26,8 @@ namespace ElCebolla.Infrastructure.Stubs
             {
                 DateOfBirth = new DateTime(1984, 1, 1),
                 FirstName = "Adam",
-                LastName = "Ray"
+                LastName = "Ray",
+                PersonId = 2
 
             };
 
@@ -33,7 +35,8 @@ namespace ElCebolla.Infrastructure.Stubs
             {
                 DateOfBirth = new DateTime(1984, 1, 1),
                 FirstName = "Joe",
-                LastName = "Mamma"
+                LastName = "Mamma",
+                PersonId = 3
 
             };
 
@@ -41,7 +44,8 @@ namespace ElCebolla.Infrastructure.Stubs
             {
                 DateOfBirth = new DateTime(1984, 1, 1),
                 FirstName = "The Other",
-                LastName = "Lebowski"
+                LastName = "Lebowski",
+                PersonId = 4
 
             };
 
@@ -49,7 +53,8 @@ namespace ElCebolla.Infrastructure.Stubs
             {
                 DateOfBirth = new DateTime(1984, 1, 1),
                 FirstName = "Harry",
-                LastName = "Potter"
+                LastName = "Potter",
+                PersonId = 5
 
             };
 
